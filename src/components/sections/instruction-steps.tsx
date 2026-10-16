@@ -32,15 +32,15 @@ const steps: Step[] = [
 ];
 
 /**
- * InstructionSteps Component
+ * InstructionSteps Component for Lowe's
  * 
- * Clean 4-step instructions card styled with #232f3e badges and an #ff9900 border accent.
+ * Clean 4-step instructions card styled with #012169 badges and border accent.
  */
 export default function InstructionSteps() {
   return (
     <section className="relative w-full max-w-md mx-auto px-4 sm:px-5 mb-4 mt-3">
-      {/* Steps Card Wrapper - #ff9900 Accent Border */}
-      <div className="relative rounded-[1.5rem] sm:rounded-[2rem] p-3.5 sm:p-5 bg-white/90 backdrop-blur-md border-2 border-[#ff9900]/40 shadow-xl overflow-hidden transition-all duration-300">
+      {/* Steps Card Wrapper - #012169 Accent Border */}
+      <div className="relative rounded-[1.5rem] sm:rounded-[2rem] p-3.5 sm:p-5 bg-white/90 backdrop-blur-md border-2 border-[#012169]/40 shadow-xl overflow-hidden transition-all duration-300">
         {/* Decorative Background Texture */}
         <div className="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden pointer-events-none">
           <img
@@ -58,8 +58,8 @@ export default function InstructionSteps() {
               className="flex items-start gap-2.5 group/item animate-in fade-in slide-in-from-left duration-500 fill-mode-both"
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              {/* Number Badge (#232f3e) */}
-              <div className="relative flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-[#232f3e] text-white font-bold text-[10px] sm:text-xs shadow-sm group-hover/item:scale-105 transition-transform duration-200 mt-0.5">
+              {/* Number Badge (#012169) */}
+              <div className="relative flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-[#012169] text-white font-bold text-[10px] sm:text-xs shadow-sm group-hover/item:scale-105 transition-transform duration-200 mt-0.5">
                 {step.number}
               </div>
 
