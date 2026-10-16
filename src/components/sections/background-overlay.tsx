@@ -13,15 +13,15 @@ const AnimatedBackground = () => {
         }}
       />
 
-      {/* Vector Icon Overlays */}
+      {/* Vector Icon Overlays - Adjusted to Lowe's Blue (#012169) and Gold Accents */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-10 z-0">
-        <Heart className="absolute top-16 left-3 w-6 h-6 text-premium-green animate-rotate-slow" />
-        <Star className="absolute top-44 left-4 w-6 h-6 text-premium-gold animate-float-spin" />
-        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-premium-gold animate-twinkle" />
-        <Gift className="absolute bottom-36 left-4 w-6 h-6 text-premium-green animate-rotate-reverse" />
-        <Star className="absolute bottom-52 right-4 w-6 h-6 text-premium-gold animate-float-gentle" />
-        <Heart className="absolute top-[60%] left-2 w-6 h-6 text-premium-green animate-rotate-slow" />
-        <Sparkles className="absolute top-[40%] right-3 w-6 h-6 text-premium-gold animate-float-spin" />
+        <Heart className="absolute top-16 left-3 w-6 h-6 text-[#012169] animate-rotate-slow" />
+        <Star className="absolute top-44 left-4 w-6 h-6 text-[#eab308] animate-float-spin" />
+        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-[#012169] animate-twinkle" />
+        <Gift className="absolute bottom-36 left-4 w-6 h-6 text-[#012169] animate-rotate-reverse" />
+        <Star className="absolute bottom-52 right-4 w-6 h-6 text-[#eab308] animate-float-gentle" />
+        <Heart className="absolute top-[60%] left-2 w-6 h-6 text-[#012169] animate-rotate-slow" />
+        <Sparkles className="absolute top-[40%] right-3 w-6 h-6 text-[#eab308] animate-float-spin" />
       </div>
 
       {/* Image Overlays - Pushed to extreme edges with low opacity */}
