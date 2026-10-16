@@ -8,27 +8,30 @@ interface NotificationItem {
   action: string;
 }
 
+// Updated fresh set of first names for Lowe's
 const firstNames = [
-  "Alexander", "Sophia", "Benjamin", "Isabella", "Mason", "Charlotte", "Ethan", "Amelia",
-  "Michael", "Harper", "James", "Evelyn", "Elijah", "Abigail", "Daniel", "Emily",
-  "Matthew", "Elizabeth", "Aiden", "Mila", "Liam", "Ella", "David", "Avery",
-  "Joseph", "Sofia", "Jackson", "Camila", "Samuel", "Aria", "Sebastian", "Scarlett",
-  "Henry", "Victoria", "Andrew", "Madison", "Gabriel", "Luna", "Joshua", "Grace",
-  "Lucas", "Emma", "Oliver", "Ava", "Theodore", "Mia", "Leo", "Marcus"
+  "Christopher", "Hannah", "Matthew", "Samantha", "Andrew", "Brianna", "Brandon", "Alexis",
+  "Austin", "Ashley", "Zachary", "Taylor", "Nicholas", "Jessica", "Tyler", "Amanda",
+  "Jacob", "Brittany", "Ryan", "Megan", "Christian", "Rachel", "Dylan", "Kayla",
+  "Nathan", "Lauren", "Jonathan", "Stephanie", "Justin", "Elizabeth", "Logan", "Nicole",
+  "Cameron", "Jennifer", "Kevin", "Courtney", "Caleb", "Heather", "Hunter", "Amber",
+  "Jordan", "Danielle", "Evan", "Mariah", "Robert", "Melissa", "Thomas", "Victoria"
 ];
 
-const lastInitials = ["B.", "D.", "F.", "H.", "J.", "K.", "L.", "M.", "P.", "R.", "S.", "T.", "W."];
+// Updated fresh set of last initials
+const lastInitials = ["A.", "C.", "E.", "G.", "I.", "N.", "O.", "Q.", "U.", "V.", "X.", "Y.", "Z."];
 
+// Lowe's-specific high-converting social proof actions
 const actions = [
-  "just claimed a $750 Amazon coupon!",
+  "just claimed a $750 Lowe's coupon!",
   "just verified reward eligibility!",
   "just unlocked reward eligibility!",
-  "just completed the review survey!",
-  "just redeemed their $750 Amazon gift card!"
+  "just completed the Lowe's review survey!",
+  "just redeemed their $750 Lowe's gift card!"
 ];
 
 const notifications: NotificationItem[] = Array.from({ length: 100 }, (_, i) => ({
-  name: `${firstNames[(i * 11) % firstNames.length]} ${lastInitials[(i * 3) % lastInitials.length]}`,
+  name: `${firstNames[(i * 13) % firstNames.length]} ${lastInitials[(i * 5) % lastInitials.length]}`,
   action: actions[i % actions.length]
 }));
 
@@ -81,9 +84,9 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - #232f3e Theme with iOS Safe Area Padding & Security Badges */}
+      {/* Top Banner Bar - Lowe's Blue (#012169) Theme */}
       <div 
-        className="sticky top-0 z-50 w-full bg-[#232f3e] border-b border-[#131921] pb-2 px-3 sm:px-4 shadow-sm backdrop-blur-md"
+        className="sticky top-0 z-50 w-full bg-[#012169] border-b border-[#001545] pb-2 px-3 sm:px-4 shadow-sm backdrop-blur-md"
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 24px)" }}
       >
         {/* Background Sparkles */}
@@ -100,19 +103,19 @@ export default function AnnouncementBar() {
 
         {/* Content Stack */}
         <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-1">
-          {/* Headline with Live Timer Badge from Sephora */}
+          {/* Headline with Live Timer Badge */}
           <div className="flex items-center justify-center gap-1.5 w-full text-center">
             <Lock className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white shrink-0 -mt-0.5" strokeWidth={2.5} />
             <p className="text-white text-[9.5px] xs:text-[10.5px] sm:text-[11.5px] font-bold tracking-tight leading-none flex items-center gap-1.5 flex-wrap justify-center">
               <span>Your spot is reserved for:</span>
-              <span className="inline-flex items-center gap-1 bg-[#131921] border border-white/20 text-white px-1.5 py-0.5 rounded font-mono text-[9px] xs:text-[10px] sm:text-[11px] font-bold shadow-sm">
+              <span className="inline-flex items-center gap-1 bg-[#001545] border border-white/20 text-white px-1.5 py-0.5 rounded font-mono text-[9px] xs:text-[10px] sm:text-[11px] font-bold shadow-sm">
                 <Clock className="w-2.5 h-2.5 text-white animate-pulse" />
                 <span>{formatTime(timeLeft)}</span>
               </span>
             </p>
           </div>
 
-          {/* Subtext Trust Badges from Sephora */}
+          {/* Subtext Trust Badges */}
           <div className="flex items-center justify-center gap-1.5 text-white/90">
             <span className="text-[7.5px] xs:text-[8px] sm:text-[8.5px] uppercase tracking-wider font-semibold">
               OVER 1,400+ VERIFIED TODAY
@@ -140,7 +143,7 @@ export default function AnnouncementBar() {
               : "-translate-y-3 opacity-0"
           }`}
         >
-          <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#232f3e] text-white">
+          <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#012169] text-white">
             <Check className="w-2.5 h-2.5" strokeWidth={3} />
           </div>
 
