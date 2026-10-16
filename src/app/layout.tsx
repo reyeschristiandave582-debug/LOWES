@@ -5,7 +5,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Lowes Gift Card",
+  title: "Lowe's Gift Card",
   description: "Participate in the Panera Bread Rewards program and get a chance to claim a $100 gift card.",
     icons: {
     icon: [
