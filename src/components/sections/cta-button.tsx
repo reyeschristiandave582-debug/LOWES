@@ -4,13 +4,13 @@ import React from 'react';
 import { Star } from 'lucide-react';
 
 /**
- * CTAButton Component
+ * CTAButton Component for LOWES
  * 
- * High-converting primary CTA button styled with #232f3e dark navy tones, 
+ * High-converting primary CTA button styled with Lowe's #012169 blue tones, 
  * vibrant gold star accents, continuous shine animation, and a thumb-friendly layout.
  */
 export default function CTAButton() {
-  const url = "https://giftclick.org/aff_c?offer_id=1431&aff_id=200438&source=AMAZON";
+  const url = "https://giftclick.org/aff_c?offer_id=1431&aff_id=200438&source=LOWES";
 
   const handleClick = (e: React.MouseEvent) => {
     // For preview environment
@@ -26,7 +26,7 @@ export default function CTAButton() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}
-        className="group relative w-full h-[52px] sm:h-[58px] bg-[#232f3e] hover:bg-[#19222d] text-white rounded-full flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(35,47,62,0.4)] hover:shadow-[0_12px_30px_rgba(35,47,62,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden no-underline border border-white/20 animate-pulse"
+        className="group relative w-full h-[52px] sm:h-[58px] bg-[#012169] hover:bg-[#00174a] text-white rounded-full flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(1,33,105,0.4)] hover:shadow-[0_12px_30px_rgba(1,33,105,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden no-underline border border-white/20 animate-pulse"
       >
         {/* Continuous Shine Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -left-full group-hover:animate-shine pointer-events-none" />
@@ -49,7 +49,7 @@ export default function CTAButton() {
       </a>
 
       {/* Ambient Floor Glow */}
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-4/5 h-6 bg-[#232f3e]/20 blur-xl -z-10 rounded-full pointer-events-none" />
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-4/5 h-6 bg-[#012169]/20 blur-xl -z-10 rounded-full pointer-events-none" />
     </div>
   );
 }
